@@ -1,0 +1,17 @@
+<h1>Update</h1>
+<br><br>
+<h2>Update Coach</h2>
+<form id="update-coach" action="/coach" method="post">
+    First Name:<br>
+    <input type="text" name="fname" value="{{coach.fname}}"><br>
+     Last Name:<br>
+    <input type="text" name="lname" value="{{coach.lname}}"><br>
+     Team:<br>
+   <select name="team" id="teamx">
+        {{#each teams}}
+            <option value={{id}}>{{name}}</option>
+        {{/each}}
+    </select>
+</form>
+<button onClick="updateCoach({{coach.id}})">Update</button>
+<script defer>selectTeam({{coach.team}});</script>

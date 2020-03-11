@@ -1,0 +1,82 @@
+<h1>Games</h1>
+<br>
+
+<h2>Filter Games</h2>
+<form id="getGame" >
+    <label>Team: </label>
+    <select name="team">
+        {{#each teams}}
+            <option value={{id}}>{{name}}</option>
+        {{/each}}
+        <option value="All" selected="selected">All</option>
+    </select>
+    <br>
+    Week:
+  <select name="week">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+        <option value="16">16</option>
+        <option value="17">17</option>
+        <option value="All" selected="selected">All</option>
+        </select>
+    <br>
+     <input type="submit" id="getGame" value="Submit">
+</form>
+
+<br>
+
+<table id="gameTab" class="gameTable">
+      <tr>
+        <th>Home Team</th>
+        <th>Away Team</th>
+        <th>Game Date</th>
+    </tr>
+     {{#each games}}
+        <tr>
+            <td>{{home_team}}</td>
+             <td>{{away_team}}</td>
+             <td>{{game_date}}</td>
+             <td>
+                 <button onclick="deleteGame({{id}})">Delete</button>
+             </td>
+             <td><button onclick="location.href='/game/{{id}}'" type="button">
+               Update</button></td>
+        </tr>
+    {{/each}}
+</table>
+
+<h2>Add Game</h2>
+<form id="addGame" method="post">
+    <label>Home Team: </label>
+    <select name="home_team">
+       {{#each teams}}
+            <option value={{id}}>{{name}}</option>
+        {{/each}}
+    </select>
+    <br>
+    <label>Away Team: </label>
+    <select name="away_team">
+        {{#each teams}}
+            <option value={{id}}>{{name}}</option>
+        {{/each}}
+    </select>
+    <br>
+    <label>Game Date: </label>
+    <input id="game_date" type="date" name="game_date">
+    <br>
+     <input type="submit" id="addGame" value="Submit">
+
+</form>

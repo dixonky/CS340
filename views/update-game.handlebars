@@ -1,0 +1,23 @@
+<h1>Update Game</h1>
+<form id="update-game" action="/game" method="post">
+
+    <label>Home Team: </label>
+    <select name="home_team" id="home_team">
+       {{#each teams}}
+            <option value={{id}}>{{name}}</option>
+        {{/each}}
+    </select><br>
+
+    <label>Away Team: </label>
+    <select name="away_team" id="away_team">
+        {{#each teams}}
+            <option value={{id}}>{{name}}</option>
+        {{/each}}
+    </select><br>
+
+    <label>Game Date: </label>
+    <input id="game_date" type="date" name="game_date" >
+    <br>
+</form>
+<button onClick="updateGame({{game.id}})">Update</button>
+<script defer>selectGame({{game.home_team}}, {{game.away_team}}, "{{game.game_date}}");</script>

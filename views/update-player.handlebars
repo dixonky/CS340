@@ -1,0 +1,38 @@
+<h1>Update</h1>
+<br>
+<br><br>
+<h2>Update Player</h2>
+<form id="update-player" action="/player" method="post">
+    First Name:<br>
+    <input type="text" name="pfname" value="{{playerx.pfname}}"><br>
+    Last Name:<br>
+    <input type="text" name="plname" value="{{playerx.plname}}"><br>
+    Number:<br>
+    <input type="text" name="number" value="{{playerx.number}}"><br>
+    Home City:<br>
+    <input type="text" name="home_city" value="{{playerx.home_city}}"><br>
+    Home State:<br>
+    <input type="text" name="home_state" value="{{playerx.home_state}}"><br>
+    Home Country:<br>
+    <input type="text" name="home_country" value="{{playerx.home_country}}"><br>
+    College:<br>
+    <input type="text" name="college" value="{{playerx.college}}"><br>
+    League Entry Date:<br>
+    <input type="date" name="league_entry" id="datex"><br>
+    
+     Position:<br>
+   <select name="positionx" id="positionx">
+        {{#each positions}}
+            <option value={{id}}>{{pname}}</option>
+        {{/each}}
+    </select>
+    
+     <br>Team:<br>
+   <select name="teamx" id="teamx">
+        {{#each teams}}
+            <option value={{id}}>{{name}}</option>
+        {{/each}}
+    </select>
+</form>
+<button onClick="updatePlayer({{playerx.id}})">Update</button>
+<script defer>selectTeamx({{playerx.team}},{{playerx.position}},"{{playerx.league_entry}}");</script>

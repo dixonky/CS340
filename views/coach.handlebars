@@ -1,0 +1,40 @@
+<h1>Coaches</h1>
+<br>
+<table id="coachTab" class="coachTable">
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Team</th>
+    </tr>
+     {{#each coaches}}
+        <tr>
+            <td>{{fname}}</td>
+             <td>{{lname}}</td>
+             <td>{{team}}</td>
+                        <td>
+                 <button onclick="deleteCoach({{id}})">Delete</button>
+             </td>
+           <td><button onclick="location.href='/coach/{{id}}'" type="button">
+               Update</button></td>
+        </tr>
+    {{/each}}
+</table>
+
+
+<h2>Add Coach</h2>
+<form id="addCoach" method="post">
+    <label >First Name: </label>
+    <input type="text" name="fname">
+    <br>
+    <label>Last Name: </label>
+    <input type="text" name="lname">
+    <br>
+    <label>Team: </label>
+    <select name="team">
+        {{#each teams}}
+            <option value={{id}}>{{name}}</option>
+        {{/each}}
+    </select>
+    <br>
+     <input type="submit" id="addCoach" value="Submit">
+</form>

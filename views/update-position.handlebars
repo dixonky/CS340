@@ -1,0 +1,10 @@
+<h1>Update Position</h1>
+<form id="update-position" action="/position" method="post">
+Name:<br>
+  <input type="text" name="pname" value={{position.pname}}>
+  <br>
+  Abbreviation:<br>
+  <input type="text" name="abbreviation" value={{position.abbreviation}}>
+  <br>
+</form>
+<button onClick="updatePosition({{position.id}})">Update</button>

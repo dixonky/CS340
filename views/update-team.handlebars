@@ -1,0 +1,16 @@
+<h1>Update</h1>
+<br>
+
+
+<br><br>
+<h2>Update Team</h2>
+<form id="update-team" action="/team" method="post">
+    Name:<br>
+    <input type="text" name="name" value="{{team.name}}"><br>
+     Region:<br>
+    <input type="text" name="region" value="{{team.region}}"><br>
+     Stadium:<br>
+    <input type="text" name="stadium" value="{{team.stadium}}"><br>
+</form>
+<button onClick="updateTeam({{team.id}})">Update</button>
+

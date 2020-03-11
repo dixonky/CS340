@@ -1,0 +1,75 @@
+h1 {
+    margin-top: 50px;
+    font-size: 28px;
+    text-align: center;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    margin-bottom: 25px;
+}
+
+h2 {
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    margin-bottom: 0px;
+}
+
+h4 {
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    margin-bottom: 4px;
+}
+#nav {
+    position: fixed;
+    top: 0px;
+    float: inline;
+    background-color: #738290;
+    border: 1px solid black;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#nav ul {
+    list-style: none;
+    display:inline;
+    margin-bottom: 10px;
+}
+
+#nav li {
+    display: inline;
+    font-size: 14pt;
+    float: inline;
+    padding: 10px 20px 10px 10px;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+/* Adapted from Sams Teach Yourself: HTML and CSS */
+#nav ul li a:link, #nav ul li a:visited {
+    font-size: 14pt;
+    font-weight: bold;
+    text-decoration: none;
+    color: #D7FCD4;
+    background-color: #738290;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+#nav ul li a:hover, #nav ul li a:active {
+    font-size: 14pt;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: #738290;
+    color:#552F46;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+html, body { 
+    height: 100%; 
+    width: 100%; 
+}
+
+body {
+    background-color: #FBFEFB;
+}
+
+#setup {
+  display: block;
+margin:auto;
+  width: 50%;
+}

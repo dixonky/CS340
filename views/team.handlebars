@@ -1,0 +1,36 @@
+<h1>Teams</h1>
+<br>
+<br>
+<table id="teamTab" class="teamTable">
+      <tr>
+        <th>Region</th>
+        <th>Name</th>
+        <th>Stadium</th>
+        <th></th>
+    </tr>
+    {{#each teams}}
+        <tr>
+            <td>{{region}}</td>
+             <td>{{name}}</td>
+             <td>{{stadium}}</td>
+            <td>
+                 <button onclick="deleteTeam({{id}})">Delete</button>
+             </td>
+           <td><button onclick="location.href='/team/{{id}}'" type="button">
+               Update</button></td>
+        </tr>
+    {{/each}}
+</table>
+<h2>Add Team</h2>
+<form id="addTeam" method="post">
+    <label >Region: </label>
+    <input type="text" name="region">
+    <br>
+    <label>Name: </label>
+    <input type="text" name="name">
+    <br>
+    <label>Stadium: </label>
+    <input type="text" name="stadium">
+    <br>
+     <input type="submit" id="addTeam" value="Submit">
+</form>
